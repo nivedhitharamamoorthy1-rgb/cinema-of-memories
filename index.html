@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinema of Memories</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#f4ecdf;color:#39271f;font-family:'DM Sans',sans-serif}
+nav{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;background:#f4ecdf;position:sticky;top:0;z-index:5;border-bottom:1px solid #d8c6b1}
+.logo{font:700 27px 'Cormorant Garamond',serif}
+.logo span{color:#743b43}
+nav a{font-size:12px;color:#39271f;text-decoration:none;margin-left:18px}
+.hero{min-height:560px;padding:90px 9%;display:flex;align-items:center;color:#f4ecdf;background:linear-gradient(90deg,#241815ed,#24181555),url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600') center/cover}
+.hero div{max-width:620px}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#b28a59}
+h1,h2,h3{font-family:'Cormorant Garamond',serif}
+.hero h1{font-size:clamp(55px,9vw,95px);line-height:1;margin:22px 0}
+.hero p{line-height:1.9;font-size:14px;color:#e7d8c9}
+.btn{display:inline-block;background:#743b43;color:white;padding:14px 24px;border:0;text-decoration:none;margin-top:22px;cursor:pointer;font-size:12px}
+section{padding:75px 8%}
+.heading{margin-bottom:30px}
+.heading h2{font-size:45px}
+.heading p{font-size:12px;color:#806a59;margin-top:5px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#e9ddca;padding:12px}
+.card img{width:100%;height:260px;object-fit:cover}
+.card h3{font-size:26px;margin:12px 0 5px}
+.card p{font-size:12px;line-height:1.8;color:#806a59}
+.tag{font-size:9px;letter-spacing:2px;color:#743b43;text-transform:uppercase}
+.music{background:#33231f;color:#f4ecdf}
+.music .heading p{color:#c6b3a0}
+.music-card{border:1px solid #735b4e;padding:24px}
+.music-card h3{font-size:27px;margin:12px 0}
+.music-card p{font-size:12px;line-height:1.8;color:#c6b3a0}
+.music-card span{font-size:35px;color:#d5b58a}
+.memory{background:#e5d7c4}
+.memory-inner{max-width:650px;margin:auto;text-align:center}
+.memory h2{font-size:46px;margin:15px}
+.memory p{font-size:13px;color:#806a59;line-height:1.8}
+input,textarea{width:100%;padding:15px;margin-top:12px;border:1px solid #cdbba6;background:#f9f4eb;font:inherit}
+textarea{height:110px}
+#memories{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:25px;text-align:left}
+.entry{padding:20px;background:#f4ecdf;border-left:3px solid #b28a59}
+.entry h3{font-size:23px;margin-bottom:8px}
+.community{text-align:center}
+.community h2{font-size:46px;margin:15px}
+.community p{max-width:550px;margin:auto;font-size:13px;line-height:1.9;color:#806a59}
+footer{background:#261a18;color:#d9c8b4;padding:35px;text-align:center}
+footer h2{font-size:30px}
+footer p{font-size:11px;margin-top:10px}
+@media(max-width:700px){
+nav{flex-wrap:wrap;gap:12px;padding:16px}
+nav a{margin-left:8px;font-size:10px}
+.hero{min-height:450px;padding:60px 7%}
+section{padding:50px 7%}
+.cards{grid-template-columns:1fr}
+.card img{height:300px}
+#memories{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Cinema <span>of</span> Memories</div>
+<div>
+<a href="#cinema">Cinema</a>
+<a href="#soundroom">Soundroom</a>
+<a href="#memory">Memories</a>
+<a href="#community">Community</a>
+</div>
+</nav>
+
+<header class="hero">
+<div>
+<div class="eyebrow">An archive of feelings · Est. 2026</div>
+<h1>Some stories<br>never fade.</h1>
+<p>Every song has a story. Every movie leaves a memory. A little corner of the internet for people who feel deeply about cinema, music and everything in between.</p>
+<a class="btn" href="#cinema">ENTER OUR WORLD →</a>
+</div>
+</header>
+
+<section id="cinema">
+<div class="heading">
+<div class="eyebrow">The silver screen</div>
+<h2>The Cinema</h2>
+<p>Films that stay with us forever.</p>
+</div>
+<div class="cards">
+<article class="card">
+<img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=700" alt="Cinema">
+<div class="tag">Romance · Memories</div>
+<h3>Stories of Love</h3>
+<p>Beautiful stories that remind us what it means to feel.</p>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=700" alt="Film camera">
+<div class="tag">Cinema · Art</div>
+<h3>Beyond the Frames</h3>
+<p>Discover scenes and characters that remain in our hearts.</p>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=700" alt="Movie theatre">
+<div class="tag">Community · Reviews</div>
+<h3>Our Film Diary</h3>
+<p>Share your favourite films and discover new perspectives.</p>
+</article>
+</div>
+</section>
+
+<section id="soundroom" class="music">
+<div class="heading">
+<div class="eyebrow">The soundtrack of life</div>
+<h2>The Soundroom</h2>
+<p>Some feelings need a melody.</p>
+</div>
+<div class="cards">
+<article class="music-card"><span>♫</span><h3>Old is Gold</h3><p>Melodies from another time that never lose their magic.</p></article>
+<article class="music-card"><span>♪</span><h3>Love in Lyrics</h3><p>Songs that say everything our hearts cannot express.</p></article>
+<article class="music-card"><span>♬</span><h3>Midnight Melodies</h3><p>For quiet nights, deep thoughts and beautiful solitude.</p></article>
+</div>
+</section>
+
+<section id="memory" class="memory">
+<div class="memory-inner">
+<div class="eyebrow">Your story belongs here</div>
+<h2>Memory Lane</h2>
+<p>Is there a song that takes you back to a special day? A film that changed how you see life? Leave a little piece of your story here.</p>
+<form id="memoryForm">
+<input id="memoryTitle" placeholder="Give your memory a title..." required>
+<textarea id="memoryText" placeholder="Write your memory here..." required></textarea>
+<button class="btn" type="submit">PRESERVE THIS MEMORY ♡</button>
+</form>
+<div id="memories"></div>
+</div>
+</section>
+
+<section id="community" class="community">
+<div class="eyebrow">A world of shared feelings</div>
+<h2>Find your people.</h2>
+<p>Meet people who love the same films, collect the same melodies and see beauty in the smallest moments. This is where strangers connect through stories.</p>
+<a href="#memory" class="btn">SHARE YOUR STORY</a>
+</section>
+
+<footer>
+<h2>Cinema of Memories</h2>
+<p>Every song has a story. Every movie leaves a memory.</p>
+<p>Made with love for the ones who feel everything. © 2026</p>
+</footer>
+
+<script>
+const form=document.getElementById('memoryForm');
+const output=document.getElementById('memories');
+
+function displayMemories(){
+const data=JSON.parse(localStorage.getItem('cinemaMemories')||'[]');
+output.innerHTML='';
+data.forEach(item=>{
+const article=document.createElement('article');
+article.className='entry';
+const title=document.createElement('h3');
+title.textContent=item.title;
+const body=document.createElement('p');
+body.textContent=item.text;
+article.append(title,body);
+output.appendChild(article);
+});
+}
+
+form.addEventListener('submit',event=>{
+event.preventDefault();
+const title=document.getElementById('memoryTitle').value.trim();
+const text=document.getElementById('memoryText').value.trim();
+if(!title||!text)return;
+const data=JSON.parse(localStorage.getItem('cinemaMemories')||'[]');
+data.unshift({title,text});
+localStorage.setItem('cinemaMemories',JSON.stringify(data));
+form.reset();
+displayMemories();
+});
+displayMemories();
+</script>
+</body>
+</html>
