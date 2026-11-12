@@ -183,6 +183,14 @@ form.reset();
 displayMemories();
 });
 displayMemories();
-</script>
-</body>
+</script> 
+<script
+  src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL="https://asptkgumjpecfkhogrhx.supabase.co";
+    const SUPABASE_KEY="sb_publishable_txsByF6k1sz9F1nJ1zmrfA_uvKHr2Ee";
+    const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+    console.log("Cinema of Memories connected!");
+  </script>
+</body>  
 </html>
