@@ -191,6 +191,68 @@ displayMemories();
     const SUPABASE_KEY="sb_publishable_txsByF6k1sz9F1nJ1zmrfA_uvKHr2Ee";
     const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
     console.log("Cinema of Memories connected!");
-  </script>
+  </script> 
+  
+<script>
+async function loadMovies() {
+    const movieList = document.getElementById('movie-list');
+
+    movieList.textContent = 'Loading movies...';
+
+    const { data: movies, error } = await supabaseClient
+        .from('Movies')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        console.error('Movie loading error:', error);
+        movieList.textContent = 'Unable to load movies. Please try again.';
+        return;
+    }
+
+    movieList.replaceChildren();
+
+    if (!movies || movies.length === 0) {
+        movieList.textContent = 'No movies added yet.';
+        return;
+    }
+
+    movies.forEach(movie => {
+        const card = document.createElement('article');
+        card.className = 'card';
+
+        if (movie.poster_url) {
+            const img = document.createElement('img');
+            img.src = movie.poster_url;
+            img.alt = movie.title || 'Movie poster';
+            card.appendChild(img);
+        }
+
+        const tag = document.createElement('div');
+        tag.className = 'tag';
+        tag.textContent = movie.genre || 'Movie';
+        card.appendChild(tag);
+
+        const title = document.createElement('h3');
+        title.textContent = movie.title || 'Untitled';
+        card.appendChild(title);
+
+        const description = document.createElement('p');
+        description.textContent = movie.description || '';
+        card.appendChild(description);
+
+        const details = document.createElement('p');
+        details.textContent =
+            [movie.language, movie.release_year, movie.director]
+            .filter(Boolean).join(' · ');
+        card.appendChild(details);
+
+        movieList.appendChild(card);
+    });
+}
+
+loadMovies();
+</script>
+
 </body>  
 </html>
